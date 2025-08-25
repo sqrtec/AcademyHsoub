@@ -364,8 +364,8 @@ body {
 }
 .custom-btn-warning {
     color: #fff;
-    background-color: var(--mainColor);
-    border-color: var(--mainColor);
+    background-color: var(--darkColor);
+    border-color: var(--darkColor);
 }
 .custom-btn-warning:hover,
 .custom-btn-warning:active,
@@ -404,7 +404,7 @@ input[type="email"] {
     outline: none !important;
     box-shadow: none !important;
 }
-/* تنسيق صفحة المنتج */
+/************* تنسيق صفحة المنتج *******************/
 .custom-breadcrumb {
     padding: 25px 0;
 }
@@ -497,7 +497,56 @@ input[type="email"] {
     font-size: 18px;
     margin-bottom: 5px;
 }
-
+/************* تنسيقات عربة الشراء **************/
+h1.custom-heading {
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+.custom-media img {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #EBEBEB;
+    margin-left: 10px;
+}
+#total-price-for-all-product {
+    color: #000;
+}
+.custom-table th,
+.custom-table td {
+    padding: 15px;
+    font-size: 120%;
+    vertical-align: middle;
+    border-bottom: 1px solid #EBEBEB;
+}
+.custom-table h4 {
+    font-size: 18px;
+    margin: 12px 0;
+}
+.custom-table th {
+    color: #C2C2C2;
+    font-weight: normal;
+}
+.custom-table th:first-child,
+.custom-table td:first-child{
+    width: 50%;
+}
+.custom-table th:not(:first-child),
+.custom-table td:not(:first-child) {
+    text-align: center;
+}
+.custom-table tfoot td {
+    border-bottom: none;
+    font-size: 150%;
+}
+.custom-btn-outline-danger {
+    background-color: transparent;
+    border-color: var(--mainColor);
+    color: var(--mainColor);
+}
+.custom-btn-outline-danger:hover {
+    background-color: var(--darkColor);
+    color: #fff;
+}
 /* تجاوبية المتجر */
 @media (max-width: 1199.98px) {
     .custom-navbar .navbar-nav li a.nav-link {
