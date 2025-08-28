@@ -22,6 +22,27 @@ body {
     line-height: 1.5;
     color: black;
 }
+::selection {
+    color: #fff;
+    background-color: var(--darkColor);
+}
+/* عرض وارتفاع شريط التمرير */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 2px;
+}
+/* خلفية المسار */
+::-webkit-scrollbar-track {
+    background: #ddd;
+}
+/* مقبض التمرير */
+::-webkit-scrollbar-thumb {
+    background: var(--darkColor);
+}
+/* عند تمرير الماوس فوق المقبض */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--darkColor);
+}
 /*بداية تنسيقات القائمة العلوية*/
 .custom-navbar {
     border-bottom: 3px solid #eef0ea;
@@ -227,7 +248,6 @@ body {
     max-width: 250px;
 }
 .custom-thumbnail:hover {
-    /* border-color: #53CCD7; */
     border-color: var(--mainColor);
 }
 .custom-thumbnail h4 {
@@ -556,6 +576,56 @@ h1.custom-heading {
     font-size: 18px;
     width: 98%;
 }
+
+/***************** Search page ********************/
+#form-advanced-search {
+    border: 1px solid #EBEBEB;
+    padding-bottom: 20px;
+    margin-bottom: 35px;
+    height: fit-content;
+}
+#form-advanced-search .panel {
+    border: none;
+    padding: 5px;
+}
+.panel .card-header {
+    background-color: transparent;
+    margin-bottom: 15px;
+    padding-bottom: 13px;
+}
+.custom-list-group .list-group-item {
+    border: none;
+}
+.custom-list-group {
+    border-bottom: 1px solid #EBEBEB;
+}
+#form-advanced-search label {
+    font-weight: bold;
+    cursor: pointer;
+}
+.custom-pagination .page-link {
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+    border: 1px solid #EBEBEB !important;
+    width: 32px !important;
+    height: 32px !important;
+    color: #C2C2C2 !important;
+    text-decoration: none !important;
+    outline: none !important;
+    transition: all 0.3s ease !important;
+}
+.custom-pagination .page-item.active .page-link {
+    background-color: var(--darkColor) !important;
+    color: #fff !important;
+    border-color: var(--darkColor) !important;
+}
+.custom-pagination .page-link:active,
+.custom-pagination .page-link:focus,
+.custom-pagination .page-link:hover {
+    color: var(--darkColor) !important;
+    background-color: #fff !important;
+    border-color: var(--darkColor) !important;
+}
 /* تجاوبية المتجر */
 @media (max-width: 1199.98px) {
     .custom-navbar .navbar-nav li a.nav-link {
@@ -642,6 +712,11 @@ h1.custom-heading {
         line-height: 40px;
         margin: 10px;
         font-size: 20px;
+    }
+    .search-pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 @media (max-width: 767.98px) {
