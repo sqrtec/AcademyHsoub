@@ -8,69 +8,18 @@
     font-weight: bolder;
     font-style: normal;
 }
-:root {
-    --mainColor: #ff3956;
-    --darkColor: #C2101E;
-    --whiteColor: #fff;
-}
-html {
-    scroll-behavior: smooth;
-}
+
 body {
     font-family: "JF Flat Regular", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 14px;
     line-height: 1.5;
     color: black;
 }
-::selection {
-    color: #fff;
-    background-color: var(--darkColor);
-}
-/* عرض وارتفاع شريط التمرير */
-::-webkit-scrollbar {
-    width: 12px;
-    height: 2px;
-}
-/* خلفية المسار */
-::-webkit-scrollbar-track {
-    background: #ddd;
-}
-/* مقبض التمرير */
-::-webkit-scrollbar-thumb {
-    background: var(--darkColor);
-}
-/* عند تمرير الماوس فوق المقبض */
-::-webkit-scrollbar-thumb:hover {
-    background: var(--darkColor);
-}
-/*بداية تنسيقات القائمة العلوية*/
 .custom-navbar {
     border-bottom: 3px solid #eef0ea;
     width: 100%;
-    background-color: var(--whiteColor);
+    background-color: #FFF;
     padding: 15px 0;
-}
-.custom-form-control, .dropdown a.custom-btn {
-    border: 1px solid #EBEBEB;
-    box-shadow: none;
-    border-radius: 2px;
-    color: #868686;
-    height: 38px;
-    padding: 6px 16px 7px;
-    transition: all 0.3s ease;
-}
-.custom-form-control:focus {
-    color: var(--darkColor);
-    box-shadow: 0 0 2px 0 var(--darkColor);
-    border-color: var(--darkColor);
-}
-.dropdown a.custom-btn:hover {
-    background-color: #d4d4d4;
-    border: 1px solid #8c8c8c;
-    color: var(--mainColor);
-}
-.dropdown a.custom-btn:focus {
-    color: var(--mainColor);
 }
 .dropdown a.categories  {
     border-right: 0 !important;
@@ -82,9 +31,9 @@ body {
     color: #777;
 }
 .search-btn {
-    background-color: var(--mainColor);
-    border-color: var(--mainColor);
-    color: var(--whiteColor);
+    background-color: #ff3956;
+    border-color: #ff3956;
+    color: #fff;
     padding: 5px 15px 7px;
     height: 38px;
     width: 65px;
@@ -92,31 +41,37 @@ body {
     font-weight: 700;
     font-size: 14px;
 }
+
 .search-btn:hover,
 .search-btn:active,
 .search-btn:focus,
 .search-btn:active:focus,
 .search-btn:active:hover {
-    background-color: var(--darkColor);
-    border-color: var(--darkColor);
-    color: var(--whiteColor);
+    background-color: #C2101E;
+    border-color: #C2101E;
+    color: #fff;
 }
+
 .nav-link {
     color: #555555;
     font-size: 14px;
     padding: 15px;
 }
+
 .custom-navbar .navbar-nav li.active a.nav-link {
-    color: var(--mainColor);
+    color: #ff3956;
     font-weight: 700;
-    border-bottom: 1px solid var(--mainColor);
+    border-bottom: 1px solid #ff3956;
 }
+
 .custom-navbar .navbar-nav li.active:hover a.nav-link {
     background-color: #e7e7e7;
 }
+
 .custom-dropdown-menu li a:hover {
     background-color: #FFE7EA;
 }
+
 .custom-navbar .btn-icon {
     padding: 5px 10px;
     color: #777;
@@ -126,16 +81,20 @@ body {
     font-size: 14px;
     margin-right: 15px;
 }
-/*نهاية تنسيقات القائمة العلوية*/
+
+
 /* قسم عارض الشرائح */
+
 #carousel-featured {
     background-color: #F7F8F3;
     height: 400px;
     padding-top: 25px;
 }
+
 #carousel-featured .carousel-item img {
     height: 375px;
 }
+
 #carousel-featured .product-details {
     border: 1px solid #DDDDDB;
     padding: 20px;
@@ -144,11 +103,13 @@ body {
     height: 200px;
     background-color: #F7F8F3;
 }
+
 #carousel-featured .product-details h1 {
     font-weight: 700;
     font-size: 175%;
     margin-top: 18px;
 }
+
 #carousel-featured .product-details .product-category {
     border: 1px solid #DDDDDB;
     padding: 10px;
@@ -157,25 +118,15 @@ body {
     right: -10px;
     background-color: #F7F8F3;
 }
-.custom-btn-outline-warning {
-    background-color: var(--darkColor);
-    /* border-color: var(--mainColor); */
-    color: #fff;
-}
-.custom-btn-outline-warning:hover,
-.custom-btn-outline-warning:active,
-.custom-btn-outline-warning:focus,
-.custom-btn-outline-warning:active:focus,
-.custom-btn-outline-warning:active:hover {
-    border-color: var(--darkColor);
-    color: var(--darkColor);
-}
+
+
 .sale {
-    background-color: var(--mainColor);
+    background-color: #53CCD7;
     color: #fff;
     font-weight: bold;
     position: absolute;
 }
+
 .sale.large {
     height: 60px;
     width: 60px;
@@ -191,10 +142,12 @@ body {
     flex-direction: column;
     transform: rotate(-25deg);
 }
+
 .custom-carousel-indicators {
     top: 235px;
     right: 41%;
 }
+
 .custom-carousel-indicators-primary {
     height: 70px !important;
     width: 70px !important;
@@ -203,15 +156,17 @@ body {
     margin: 0 !important;
     margin-left: 5px !important;
 }
+
 .custom-carousel-indicators-primary.active {
-    border-color: var(--mainColor) !important;
+    border-color: #f8ad47 !important;
 }
+
 #carousel-featured .carousel-control-prev .fa-chevron-right,
 #carousel-featured .carousel-control-next .fa-chevron-left {
     color: #868686;
     font-size: 38px;
 }
-/* قسم مميزات المنتج */
+
 #store-features {
     box-shadow: 0 0 15px #EEF0EA;
     background-image: url(../images/bg_features.png);
@@ -224,50 +179,36 @@ body {
     padding-top: 25px;
     background-position: -10px -20px;
 }
+
 #store-features .feature>img {
     height: 40px;
     margin-bottom: 10px;
 }
+
 #store-features .feature+.feature {
     border-right: 1px solid #EEF0EA;
 }
-/* قسم المنتجات الأكثر مبيعاً */
+
 .heading {
     font-size: 24px;
     margin-bottom: 25px;
 }
-.custom-thumbnail {
-    border: 2px solid #EEF0EA;
-    padding: 8px;
-    cursor: pointer;
-    margin-bottom: 50px;
-}
-.custom-thumbnail img {
-    max-height: 250px;
-    width: 100%;
-    max-width: 250px;
-}
-.custom-thumbnail:hover {
-    border-color: var(--mainColor);
-}
-.custom-thumbnail h4 {
-    font-size: 18px;
-}
+
 .price {
-    /* color: #53CCD7; */
-    color: var(--mainColor);
+    color: #53CCD7;
 }
+
 .rating {
     color: #C2C2C2;
 }
+
 .rating .active {
     color: #f3af41;
 }
-.custom-thumbnail .overlay {
+
+.overlay {
     position: absolute;
-    /* background-color: rgba(83, 204, 215, 0.5); */
-    background-color: rgba(255, 57, 86, 0.4); /* الشفافية 50% */
-;
+    background-color: rgba(83, 204, 215, 0.5);
     height: 250px;
     width: calc(100% - 16px);
     display: flex;
@@ -276,50 +217,56 @@ body {
     opacity: 0;
     transition: all .3s ease;
 }
-.custom-thumbnail .overlay:hover {
+
+.overlay:hover {
     opacity: 1;
 }
-.add-to-cart-btn {
-    color: var(--darkColor);
-    background-color: #fff;
-    font-weight: 700;
-}
+
+
+
 .custom-thumbnail .sale {
     padding: 5px 10px;
     position: absolute;
     left: 16px;
     top: 14px;
 }
+
 .custom-thumbnail .sale::before {
     content: "-";
 }
+
 .custom-carousel-indicators2 {
     bottom: -20px !important;
 }
+
 .custom-carousel-indicators2>li {
     width: 13px !important;
     height: 13px !important;
     margin: 2px !important;
     background-color: #dbdbdb !important;
 }
+
 .custom-carousel-indicators2>li.active {
-    background-color: var(--darkColor) !important;
+    background-color: #565656 !important;
 }
-/* تنسيق قسم الماركات العالمية */
+
 .panel {
     border: 4px solid #EEF0EA;
     border-radius: 2px;
     padding: 20px;
 }
+
 .panel h4,
 .panel .price {
     font-size: 130%;
     margin-bottom: 15px;
     margin-top: 0;
 }
+
 .custom-text-muted {
     color: #A9A9A9;
 }
+
 .arrow-btn {
     background-color: #fff;
     color: #868686;
@@ -328,26 +275,25 @@ body {
     padding: 5px 10px;
     font-size: 12px;
 }
-.arrow-btn:hover {
-    border-color: var(--darkColor);
-    color: var(--darkColor);
-}
+
 #row-brands h3.heading {
     border-top: 1px solid #EEF0EA;
     padding-top: 25px;
 }
-/* تنسيق ذيل الصفحة */
+
 #brand-logos {
-    background-color: #f8f9fa;
+    background-color: #dbeefa;
     padding: 25px 0;
     color: #555555;
 }
+
 #brand-logos img {
     margin-left: 25px;
     margin-right: 25px;
     max-width: 100px;
     max-height: 100px;
 }
+
 #footer-nav {
     background-color: #1f1e1e;
     padding: 50px 0 40px;
@@ -355,47 +301,42 @@ body {
     background-repeat: no-repeat, no-repeat;
     background-position: 110% 0, -10% -150%;
 }
+
 .footer-nav-links {
     margin: 30px 0;
 }
+
 .footer-nav-links a {
     color: #555555;
     margin-left: 30px;
     font-weight: bold;
     text-decoration: none !important;
 }
+
 .newsletter {
     border-top: 1px solid #292929;
 }
+
 .newsletter form {
     max-width: 260px;
 }
+
 .newsletter form label {
     margin: 27px 0 16px;
     font-size: 12px;
     font-weight: bold;
     color: #555555;
 }
+
 .newsletter form input {
     background-color: #313131;
     opacity: .6;
     border: none;
     height: 38px;
 }
-.custom-btn-warning {
-    color: #fff;
-    background-color: var(--darkColor);
-    border-color: var(--darkColor);
-}
-.custom-btn-warning:hover,
-.custom-btn-warning:active,
-.custom-btn-warning:focus,
-.custom-btn-warning:active:focus,
-.custom-btn-warning:active:hover {
-    background-color: var(--darkColor);
-    border-color: var(--darkColor);
-    color: var(--whiteColor);
-}
+
+
+
 .newsletter form button {
     border-radius: 0;
     border-top-left-radius: 3px;
@@ -405,6 +346,7 @@ body {
     color: inherit;
     height: 38px;
 }
+
 input[type="email"] {
     text-align: right;
 }
@@ -414,59 +356,76 @@ input[type="email"] {
     padding: 30px 0;
     font-weight: 700;
 }
+
 #footer-copyright-social a {
     color: #303030;
     margin: 0 5px;
     text-decoration: none;
 }
+
 .btn:focus,
 .btn:active {
     outline: none !important;
     box-shadow: none !important;
 }
-/************* تنسيق صفحة المنتج *******************/
+
+
+/*
+----- Product Page --------
+*/
+
 .custom-breadcrumb {
     padding: 25px 0;
 }
+
 .custom-breadcrumb a {
     color: #555;
     text-decoration: none;
-    transition: 0.3s all ease;
 }
+
 .custom-breadcrumb a:hover {
-    color: var(--darkColor);
+    color: #F8AD47;
 }
+
 .custom-breadcrumb>li::before {
-    color: var(--mainColor) !important;
+    color: #F8AD47 !important;
 }
+
 .custom-breadcrumb .active {
     color: #bfbfbf;
 }
+
 #carousel-product-images .carousel-indicators {
     position: absolute;
     top: 92%;
     right: 0;
 }
+
 #carousel-product-images .carousel-item img {
     width: 100%;
     height: auto;
     border: 1px solid #EBEBEB;
 }
+
 .product-category {
     color: #A9A9A9;
 }
+
 #form-product-selection h2 {
     font-weight: 700;
     margin: 18px 0;
 }
+
 .price.large {
     font-size: 30px;
     margin-top: 20px;
 }
+
 .borders-between>div+div {
     border-top: 1px solid #EBEBEB;
     padding: 15px 0;
 }
+
 .product-option {
     display: inline-block;
     height: 23px;
@@ -478,46 +437,65 @@ input[type="email"] {
     margin: 3px;
     font-weight: 700;
 }
+
 .product-option input {
     display: none;
 }
+
 .product-option.active {
-    color: var(--darkColor);
-    border-color: var(--darkColor);
+    color: #F8AD47;
+    border-color: #F8AD47;
 }
+
+.color-option.active {
+    border-color: #fff;
+    outline: #000 solid 1px;
+}
+
 .product-quantity select {
     height: 34px !important;
     padding: 6px 12px;
     margin-right: 5px;
 }
+
 .custom-btn-with-icon {
     margin: 15px 0;
     font-size: 18px;
     padding: 5px 10px;
 }
+
 .heading-with-border-bottom {
     border-bottom: 1px solid #EBEBEB;
     padding-bottom: 15px;
 }
+
 .heading-inline {
     display: inline-block;
     min-width: 250px;
 }
+
 .more-description p,
 .more-description ul {
     margin-bottom: 10px;
 }
+
 .comments .comment img {
     width: 80px;
     height: 80px;
     margin-left: 10px;
     border: 1px solid #dfdfdf;
 }
+
 .comments .comment h4 {
     font-size: 18px;
     margin-bottom: 5px;
 }
-/************* تنسيقات عربة الشراء **************/
+
+
+/*
+-------- Checkout Page ----------
+*/
+
 h1.custom-heading {
     font-size: 36px;
     margin-bottom: 25px;
@@ -531,43 +509,11 @@ h1.custom-heading {
 #total-price-for-all-product {
     color: #000;
 }
-.custom-table th,
-.custom-table td {
-    padding: 15px;
-    font-size: 120%;
-    vertical-align: middle;
-    border-bottom: 1px solid #EBEBEB;
-}
-.custom-table h4 {
-    font-size: 18px;
-    margin: 12px 0;
-}
-.custom-table th {
-    color: #C2C2C2;
-    font-weight: normal;
-}
-.custom-table th:first-child,
-.custom-table td:first-child{
-    width: 50%;
-}
-.custom-table th:not(:first-child),
-.custom-table td:not(:first-child) {
-    text-align: center;
-}
-.custom-table tfoot td {
-    border-bottom: none;
-    font-size: 150%;
-}
-.custom-btn-outline-danger {
-    background-color: transparent;
-    border-color: var(--mainColor);
-    color: var(--mainColor);
-}
-.custom-btn-outline-danger:hover {
-    background-color: var(--darkColor);
-    color: #fff;
-}
-/**************** Payment Page ***************/
+
+/*
+--------- Payment Page ---------
+*/
+
 .custom-input-details {
     border-width: 2px;
     border-radius: 3px;
@@ -577,32 +523,43 @@ h1.custom-heading {
     width: 98%;
 }
 
-/***************** Search page ********************/
+
+/*
+--------- Search page ----------
+*/
+
 #form-advanced-search {
     border: 1px solid #EBEBEB;
     padding-bottom: 20px;
     margin-bottom: 35px;
     height: fit-content;
 }
+
 #form-advanced-search .panel {
     border: none;
     padding: 5px;
 }
+
+
 .panel .card-header {
     background-color: transparent;
     margin-bottom: 15px;
     padding-bottom: 13px;
 }
+
 .custom-list-group .list-group-item {
     border: none;
 }
+
 .custom-list-group {
     border-bottom: 1px solid #EBEBEB;
 }
+
 #form-advanced-search label {
     font-weight: bold;
     cursor: pointer;
 }
+
 .custom-pagination .page-link {
     margin-left: 3px !important;
     margin-right: 3px !important;
@@ -614,44 +571,48 @@ h1.custom-heading {
     outline: none !important;
     transition: all 0.3s ease !important;
 }
+
 .custom-pagination .page-item.active .page-link {
-    background-color: var(--darkColor) !important;
+    background-color: #F8AD47 !important;
     color: #fff !important;
-    border-color: var(--darkColor) !important;
+    border-color: #F8AD47 !important;
 }
+
 .custom-pagination .page-link:active,
 .custom-pagination .page-link:focus,
 .custom-pagination .page-link:hover {
-    color: var(--darkColor) !important;
+    color: #F8AD47 !important;
     background-color: #fff !important;
-    border-color: var(--darkColor) !important;
+    border-color: #F8AD47 !important;
 }
-/************* Page Contact *************/
+
+/* صفحة التواصل */
+
 #map {
     padding: 0;
 }
+
 #contact-options h4 {
     font-size: 18px;
 }
+
 #contact-info .fa-lg {
-    color: var(--darkColor);
+    color: #f3af41;
     margin: 10px 0px 0px 10px;
 }
+
 #contact-options textarea {
     height: 105px !important;
 }
-/* تجاوبية المتجر */
+
+
+@media (max-width: 1399.98px) {  }
 @media (max-width: 1199.98px) {
     .custom-navbar .navbar-nav li a.nav-link {
         padding: 7px;
     }
     #carousel-featured .carousel-indicators {
         margin-right: 12%;
-    }
-}
-@media (max-width: 767.98px) and (max-width: 991.98px) {
-    .custom-thumbnail img {
-        height: 200px;
     }
 }
 @media (max-width: 991.98px) { 
@@ -732,59 +693,71 @@ h1.custom-heading {
         justify-content: center;
         align-items: center;
     }
+
+    /*صفحة التواصل*/
+    #form-subscription {
+        margin-bottom: 25px;
+    }
+
+    #contact-options input[name=name]
+    {
+        margin-bottom: 15px;
+    }
 }
 @media (max-width: 767.98px) {
+
     #carousel-featured {
         padding-bottom: 25px;
     }
+
     #carousel-featured,
     #carousel-featured .product-details {
         height: auto;
     }
+
     #carousel-featured .product-details {
         top: -2px;
         text-align: center;
     }
+
     #carousel-featured .carousel-item img {
         height: 250px;
     }
-    .custom-thumbnail img {
-        height: 250px;
-    }
-    #carousel-most-sold-altrenative .custom-thumbnail img {
-        margin: auto;
-    }
+
     #brand-logos img {
         max-width: 50px;
         max-height: 50px;
         margin: 5px 24px 5px 23px;
     }
+
     #footer-nav .footer-logo {
         margin-bottom: 30px;
     }
+
     #footer-nav form {
         width: 100%;
         max-width: 100%;
         padding: 0 20px;
     }
+
     .hide-on-small {
         display: none;
     }
 }
+
 @media (max-width: 575.98px) { 
     .inline-form .custom-form-control {
         width: 80% !important;
     }
+
     .inline-form .search-btn {
         width: 20% !important;
     }
+
     #brand-logos .img-container img {
         margin: 5px 15px;
     }
-    #form-product-selection,
-    .comments {
-        padding-right: 15px;
-    }
+
     #form-product-selection,
     .comments {
         padding-right: 15px;
