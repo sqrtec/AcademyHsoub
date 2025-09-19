@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="موقع شخصي">
+    <meta name="author" content="صقر عمار">
+    <title>تطوير موقع شخصي</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <main>
+        <section id="header">
+            <div class="branding" style="flex-grow: 8;">
+                <h1>
+                    <a href="index.html">
+                        <i class="fa fa-user-circle"></i>
+                        صفحة
+                        <span class="highlight">صقر عمار</span>
+                    </a>
+                </h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li class="current"><a href="gallery.html">معرض الأعمال</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section id="slider">
+            <div id="wrapper">
+                <div class="content">
+                    <img src="images/1.PNG" alt="">
+                </div>
+                <div class="content">
+                    <img src="images/2.PNG" alt="">
+                </div>
+                <div class="content">
+                    <img src="images/3.PNG" alt="">
+                </div>
+                <div class="content">
+                    <img src="images/4.PNG" alt="">
+                </div>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li class="item-links" data-pos="0"></li>
+                    <li class="item-links" data-pos="2"></li>
+                    <li class="item-links" data-pos="3"></li>
+                    <li class="item-links" data-pos="4"></li>
+                </ul>
+            </div>
+            <section id="footer">
+                <p>الصفحة الشخصية لصقر عمار &copy; <span id="current-year"></span></p>
+            </section>
+        </section>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

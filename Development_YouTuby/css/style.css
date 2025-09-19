@@ -1,0 +1,421 @@
+/* Page Index html */
+:root {
+    --mainColor: #3D74B6;
+}
+@font-face {
+    font-family: "cairoFont";
+    src: url(../fonts/Cairo-Regular.ttf);
+}
+body {
+    font-family: "cairoFont", Arial, sans-serif;
+    background-color: #fafafa;
+}
+a {
+    color:#000;
+    text-decoration: none !important;
+}
+/*تغيير الألوان الإفتراضية لجميع الأزرار في الموقع*/
+button {
+    background-color: transparent !important;
+    color: var(--mainColor) !important;
+    border-color: var(--mainColor) !important;
+}
+/*تغيير الألوان الإفتراضية لجميع الأزرار في الموقع عند مرور مؤشر الفأرة على الزر*/
+button:hover {
+    color: #fff !important;
+    background-color: var(--mainColor) !important;
+}
+/*flex يجب علينا وضع هذه الخاصية للابن "جسم البطاقة" لأن البطاقة لديها قيمة عرض*/
+.card-body {
+    min-width: 0;
+}
+.card .card-horizontal .card-body p {
+    white-space: nowrap;/*منع النزول لسطر جديد والإكتفاء بسطر واحد*/
+    overflow: hidden;/*إخفاء جميع المعلومات بعد السطر الأول*/
+    text-overflow: ellipsis;/*إضافة النقط الثلاث في نهاية الجملة*/
+}
+/*تغيير لون القائمة العلوية*/
+#top-menu .bg-light {
+    background-color: #fff !important;
+}
+/*وضع دائرة حول أيقونة شعار الموقع*/
+#top-menu .video-icon {
+    background-color: var(--mainColor);
+    color: #fff;
+    border-radius: 15%;
+}
+/*تغيير لون الروابط التشعبية عند مرور مؤشر الفأرة عليها أو عند الضغط عليها*/
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .active>.nav-link {
+    color: #fff;
+    background-color: var(--mainColor);
+}
+/*تغيير لون رابط تسجيل الدخول*/
+.navbar .login {
+    color: var(--mainColor);
+    margin-right: 5px;
+}
+/*x تغيير ألوان إشارة*/
+.modal .modal-header .close:hover {
+    color: var(--mainColor) !important;
+    background-color: transparent !important;
+}
+/*إخفاء الظل الذي يظهر حول مربع البحث والأزرار عند الضغط عليه*/
+input.form-control:focus,
+button:focus {
+    box-shadow: none !important;
+}
+.card .card-icons {
+    position: relative;
+}
+/*تحديد موضع حاوية الوقت*/
+time {
+    position: absolute;
+    bottom: 10px;
+    left: 7px;
+    color: #fff;
+    background-color: #000;
+    padding: 0px 3px;
+}
+/*تحديد موضع أيقونة التشغيل*/
+.card .fa-play {
+    position: absolute;
+    top: 43%;
+    right: 45%;
+    color:#2c3131c7;
+    display: none;
+}
+.card:hover .fa-play {
+    display: inline;
+}
+.card:hover {
+    transform: translateY(-.9%);
+}
+.card {
+    transition: transform .5s;
+}
+.card .card-title {
+    height: 50px;
+    overflow: hidden;
+}
+#top-menu .fa-bars {
+    cursor: pointer;
+}
+/*تنسيق القائمة الجانبية*/
+.sidebar {
+    position: fixed;
+    z-index: 4;
+    right: -17rem;
+    transition: all 0.5s ease-in-out;
+    height: 100%; /*طول القائمة*/
+    background-color: #fff;
+    overflow: hidden; /*أخفي جميع العناصر التي تتخطى 100 */
+    padding-bottom: 60px;
+}
+/*إظهار شريط التمرير بشكل شاقولي*/
+.sidebar:hover {
+    overflow-y: scroll;
+}
+/*تغيير ألوان الأيقونات في القائمة الجانبية*/
+.sidebar .purple {
+    color:var(--mainColor);
+}
+/*تغيير ألوان عناصر القائمة عند مرور مؤشر الفأرة على القائمة الجانبية*/
+.sidebar .list-group-item:hover {
+    color:#fff;
+    background-color: var(--mainColor);
+}
+/*تغيير لون الأيقونات أيضًا عند مرور مؤشر الفأرة على القائمة الجانبية*/
+.sidebar .list-group-item:hover .purple {
+    color:#fff;
+}
+/*زيادة عرض عناصر القائمة الجانبية*/
+.sidebar .list-group-item {
+    width: 17rem;
+}
+/*إخفاء القائمة الجانبية عند أول تحميل للصفحة*/
+#wrap.toggled .sidebar {
+    right: 0rem;
+}
+/*تنسيق خلفية شريط التمرير*/
+.sidebar::-webkit-scrollbar {
+    background: rgb(230,230,230);
+    width: 8px;
+}
+/*تنسيق شريط التمرير*/
+.sidebar::-webkit-scrollbar-thumb {
+    background: rgb(179,179,179);
+    width:8px;
+}
+/*الطبقة السوداء*/
+.layer {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    display: none;
+}
+.navbar .search-icon {
+    color: var(--mainColor);
+    cursor: pointer;
+    padding: 15px 10px;
+    position: absolute;
+    top: 15px;
+    left: 132px;
+    display: none;
+}
+.navbar .search-icon:hover {
+    color: #fff;
+    background-color: var(--mainColor);
+}
+/*تنسيق حقل الإدخال الذي سيظهر عند الضغط على أيقونة البحث*/
+.search-input {
+    position: fixed;
+    top: 72px;
+    border: none;
+    padding: 6px 23px;
+    height: 60px;
+    background-color: #efeeee;
+    display: none;
+    z-index: 1;
+}
+.search-input:focus {
+    background-color: #efeeee;
+}
+/*حذف المسافات من الحاوية لكي يمتد حقل البحث على كامل الشاشة*/
+.container-fluid {
+    padding: 0px;
+    overflow: hidden;
+}
+@media (max-width: 1115px) {
+    /*إخفاء حقل البحث الموجود في القائمة العلوية*/
+    .navbar .collapse .form-hide {
+        display: none;
+    }
+    /*إظهار أيقونة البحث*/
+    .navbar .search-icon {
+        display: inline;
+    }
+}
+/*إخفاء حقل البحث الذي يظهر في الشاشات المتوسطة والصغيرة*/
+@media (min-width: 1115px) {
+    .search-input {
+        display: none !important;
+    }
+}
+
+/* Page Channel html */
+/*تنسيق زر الاشتراك*/
+.channel-page .follow button {
+    color:#fff !important;
+    background-color: var(--mainColor) !important;
+}
+/*إلغاء تأثير الانتقال من البطاقة التي تحتوي على مقطع الفيديو*/
+.channel-page .video-section .card:hover {
+    transform: translateY(0%);
+}
+/*تصغير حجم حاوية الوقت*/
+time {
+    font-size: 13px;
+}
+/*تغيير موضع أيقونات التشغيل*/
+.channel-page .social-media {
+    bottom: 18px;
+    left: 20px;
+}
+/*تغيير موضع زر الاشتراك*/
+.channel-page .follow {
+    bottom: 18px;
+    right: 18px;
+}
+@media (max-width: 593px) {
+    /*تصغير حجم الخط والحاشية لأزرار القائمة لكي تأتي على صف واحد*/
+    .navbar-light .navbar-nav .nav-link {
+        font-size: 13px;
+        padding-right: 4px;
+        padding-left: 4px;
+    }
+}
+@media (min-width: 594px) {
+    .navbar-light .navbar-nav .nav-link {
+        padding-right: 4px;
+        padding-left: 4px;
+    }
+}
+/* Page Search html */
+/*تغيير مؤشر الفأرة عند المرور على أيقونة التصفية والكتابة التي بجانبها*/
+#search-filters-icon {
+    cursor: pointer;
+}
+/*إخفاء قائمة التصفية*/
+.search-header .filter-column {
+    display: none;
+}
+/*عند تحديد صندوق التأشير غير لونه*/
+input:checked+span {
+    color: var(--mainColor);
+}
+/*تغييرموضع الحاوية التي تحتوي على مدة مقطع الفيديو*/
+time {
+    bottom: 7px;
+    left: 29px;
+}
+@media (max-width: 767px) {
+    /*لكي تمتد الصورة على كامل الحاوية التي تحتويها*/
+    .card .card-top-image {
+        width: 100%;
+    }
+    .card .card-horizontal time {
+        left: 10px;
+    }
+    .card .card-horizontal .fa-play {
+        right: 48%;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    /*إظهار الحاوية التي تحتوي على اسم القناة وشعارها في سطرٍ لوحدها*/
+    .card .card-horizontal .card-body .channel-img {
+        display: block;
+        margin-top: 10px;
+    }
+    /*مسح الحاشية من يمين الصورة*/
+    .card .card-horizontal .card-body .channel-img>img {
+        margin-right: 0px !important;
+    }
+    /*إخفاء النص الذي يزيد عن سطرين*/
+    h4 {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical; 
+    }
+}
+
+/* Page log html */
+/*تنسيق قسم الترشيحات*/
+.history-right-column {
+    background-color: #fff;
+    height: 566px;
+}
+/*تغيير لون الخلفية للعنصر الفعال في القائمة*/
+.list-group-item.active {
+    background-color: var(--mainColor);
+    border-color: var(--mainColor);
+}
+/*تغييرموضع حاوية الوقت*/
+time {
+    bottom: 7px;
+    left: 29px;
+}
+/*نقل إشارة الإغلاق وتنسيقها */
+.history-page .remove {
+    position: absolute;
+    top: 10px;
+    right: 13px;
+    color:#2c3131c7;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    /*إظهار الحاوية التي تحتوي على اسم القناة وشعارها في سطرٍ لوحدها*/
+    .card .card-horizontal .card-body .channel-img {
+        display: block;
+        margin-top: 10px;
+    }
+    /*مسح الحاشية من يمين الصورة*/
+    .card .card-horizontal .card-body .channel-img>img {
+        margin-right: 0px !important;
+    }
+    /*إخفاء النص الذي يزيد عن سطرين*/
+    h4 {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical; 
+    }
+}
+@media (max-width: 991px) {
+    .card {
+        margin-top: 30px;
+    }
+}
+@media (max-width: 767px) {
+    .card .card-top-image {
+        width: 100%;
+    }
+    .card .card-horizontal time {
+        left: 10px;
+    }
+    .card .card-horizontal .fa-play {
+        right: 48%;
+    }
+}
+/* Page Watch Html */
+/*إلغاء تأثير الانتقال من البطاقة التي تحتوي على مقطع الفيديو*/
+.card:hover {
+    transform: translateY(0%);
+}
+/*لكي توازي الأيقونات الكتابة التي فوقها*/
+.watch-page .watch-icons {
+    position: absolute;/*وضع الأيقونات بأسفل الفيديو*/
+    bottom: 5px;
+}
+/*عند مرور الفأرة على الأيقونات*/
+.watch-icons i:hover {
+    cursor: pointer;
+}
+/*إخفاء النص الذي سنظهره ونخفيه عند الضغط على الزر*/
+.watch-page #more {
+    display: none;
+}
+/*إخفاء الظل الذي يظهر حول حقل الإدخال عند الضغط عليه*/
+.form-control:focus {
+    box-shadow: none;
+}
+/*إخفاء جميع الردود*/
+.card-inner {
+    display: none;
+}
+/*تغيير لون أزرار التعليق لتتناسب مع ألوان موقعنا*/
+.public-comment .card .btn {
+    background-color: var(--mainColor);
+    border-color: var(--mainColor);
+    color: #fff;
+}
+.public-comment .card .btn:hover {
+    background-color: var(--mainColor);
+}
+/*تغيير موضع حاوية الوقت*/
+time {
+    left: 24px !important;
+}
+/*تغيير موضع أيقونة التشغيل*/
+.watch-page .fa-play {
+    right: 46% !important;
+}
+div.dropdown-menu.show {
+    inset: 0 105px auto auto !important;
+}
+/*تصغير حجم العنصر الذي يحتوي على مدة مقطع الفيديو وحجم أيقونة التشغيل*/
+@media (min-width: 992px) {
+    time {
+        font-size: 13px;
+    }
+    .fa-play {
+        font-size: 20px !important;
+    }
+}
+@media (max-width: 1062px) {
+    /*وضع هامش في أسفل الزر لكي يبتعد عن الأيقونات الموجودة أسفل منه*/
+    #myBtn {
+        margin-bottom: 60px !important;
+    }
+}
+@media (max-width: 570px) {
+    /*تصغير حجم الخط للحاوية التي تحتوي على مدة طرح التعليق*/
+    .reply-time {
+        font-size: 10px;
+    }
+}
