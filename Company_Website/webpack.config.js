@@ -82,7 +82,7 @@ module.exports = {
         overlay: true, // يُظهر الأخطاء في المتصفح
         },
         devMiddleware: {
-            writeToDisk: true,
+            writeToDisk: false,
         },
     },
 

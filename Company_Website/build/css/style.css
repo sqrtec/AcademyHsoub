@@ -9603,6 +9603,7 @@ body {
   font-family: "cairoFont" !important;
 }
 
+/* Start Navbar */
 .top-menu .navbar {
   font-weight: bold;
   padding: 0 100px !important;
@@ -9618,6 +9619,25 @@ body {
   border-bottom: 1px solid #FF7766;
 }
 
+/* End Navbar */
+/* Start Carousel */
+.carousel-top .row {
+  display: block !important;
+}
+.carousel-top .carousel .carousel-item img {
+  height: 450px;
+}
+.carousel-top .carousel .carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 20px 5px 0 0;
+}
+.carousel-top .carousel .carousel-indicators li.active {
+  background-color: #FF7766;
+}
+
+/* End Carousel */
 @media (max-width: 991px) {
   .top-menu .navbar {
     padding: 0 20px !important;

@@ -1,5 +1,7 @@
+// Here Are The Variables
 $main-color: #FF7766;
 $custom-color: #EEE;
+
 
 @font-face {
     font-family: 'cairoFont';
@@ -9,6 +11,7 @@ $custom-color: #EEE;
 body {
     font-family: "cairoFont" !important;
 }
+/* Start Navbar */
 .top-menu {
     .navbar {
         font-weight: bold;
@@ -18,6 +21,7 @@ body {
             li > a {
                 transition-property: background-color;
                 transition-duration: 0.5s;
+
                 &:hover {
                     color: $main-color !important;
                     background-color: $custom-color !important;
@@ -27,7 +31,89 @@ body {
         }
     }
 }
+/* End Navbar */
+/* Start Carousel */
+.carousel-top {
+    .row {
+        display: block !important;
+    }
+    .carousel {
+        .carousel-item {
+            img {
+                height: 450px;
+            }
+            .overlay {
+                position: absolute;
+                z-index: 1;
+                background-color: rgba(65, 155, 155, 0.5);
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                display: flex !important;
+                flex-flow: column;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        .carousel-indicators {
+            li {
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                margin: 20px 5px 0 0;
+                &.active {
+                    background-color: $main-color;
+                }
+            }
+            .carousel-caption {
+                h1 {
+                    font-weight: bold;
+                    color: white;
+                    margin-bottom: 50px;
+                }
+                h4 {
+                    width: 60%;
+                    color: $custom-color;
+                }
+            }
+        }
+    }
+}
+.custom-btn {
+    padding: 10px 20px;
+    color: $main-color !important;
+    border: 1px solid $main-color !important;
+    font-weight: bold !important;
 
+    &:hover,
+    &:focus {
+        color: $custom-color !important;
+        border: 1px solid $main-color !important;
+        background-color: $main-color !important;
+    }
+}
+/* End Carousel */
+.who-are-we {
+    .custom-paragraph {
+        line-height: 2em;
+    }
+    .custom-btn-main {
+        padding: 20px;
+        background-color: $main-color !important;
+        color: white;
+        font-weight: bold;
+        width: 250px;
+        &:hover {
+            color: #000;
+        }
+    }
+    .company-name {
+        color: $main-color;
+    }
+}
+
+// Here Is The Responsiveness Of The Site
 @media (max-width: 991px) {
     .top-menu {
         .navbar {
@@ -36,6 +122,17 @@ body {
                 a {
                     border-bottom: none !important;
                     padding-right: 5px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px) {
+    .carousel-top {
+        .carousel {
+            .carousel-caption {
+                h1 {
+                    font-size: 20px;
                 }
             }
         }
