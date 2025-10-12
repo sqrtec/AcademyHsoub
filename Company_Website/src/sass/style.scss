@@ -2,15 +2,29 @@
 $main-color: #FF7766;
 $custom-color: #EEE;
 
-
+// General Formats
 @font-face {
     font-family: 'cairoFont';
     src: url(/src/fonts/Cairo-Regular.ttf);
 }
-
 body {
     font-family: "cairoFont" !important;
 }
+// Public button
+.custom-btn-main {
+    padding: 20px;
+    background-color: $main-color !important;
+    color: white;
+    font-weight: bold;
+    width: 250px;
+    &:hover {
+        color: #000;
+    }
+}
+
+
+
+
 /* Start Navbar */
 .top-menu {
     .navbar {
@@ -32,6 +46,8 @@ body {
     }
 }
 /* End Navbar */
+
+
 /* Start Carousel */
 .carousel-top {
     .row {
@@ -45,7 +61,7 @@ body {
             .overlay {
                 position: absolute;
                 z-index: 1;
-                background-color: rgba(65, 155, 155, 0.5);
+                background: rgba(65, 155, 155, 0.5);
                 top: 0;
                 right: 0;
                 height: 100%;
@@ -94,24 +110,71 @@ body {
     }
 }
 /* End Carousel */
+
+
+// Start About Us Section
 .who-are-we {
     .custom-paragraph {
         line-height: 2em;
-    }
-    .custom-btn-main {
-        padding: 20px;
-        background-color: $main-color !important;
-        color: white;
-        font-weight: bold;
-        width: 250px;
-        &:hover {
-            color: #000;
-        }
     }
     .company-name {
         color: $main-color;
     }
 }
+// End About Us Section
+
+
+// Start Company Work
+.latest-projects {
+    background-color: #FFFFCC;
+    #latest-company-projects {
+        width: 80%;
+
+        .thumbnail2 {
+            position: relative;
+            margin-bottom: 20px;
+            margin-top: 20px;
+
+            .caption2 {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: rgba(65, 155, 155, 0.5);
+                max-width: 100%;
+                height: 100%;
+                padding: 2%;
+                text-align: center;
+                color: #fff !important;
+                display: none;
+            }
+            .project-category {
+                position: absolute;
+                right: 0;
+                top: 5%;
+                font-weight: bold;
+                background: rgba(240, 240, 240, 0.75);
+                padding: 10px;
+                border-top-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                box-shadow: 0 5px 20px 0 #202020;
+            }
+        }
+        a.carousel-control-next {
+            position: absolute;
+            left: -5%;
+            color: #252222;
+            width: 0;
+        }
+        a.carousel-control-prev {
+            position: absolute;
+            right: -5%;
+            color: #252222;
+            width: 0;
+        }
+    }
+}
+// End Company Work
+
 
 // Here Is The Responsiveness Of The Site
 @media (max-width: 991px) {

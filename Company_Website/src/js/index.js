@@ -4,3 +4,4 @@ import '@laylazi/bootstrap-rtl/dist/js/bootstrap.min.js'
 import 'jquery/dist/jquery.min.js'
 import 'popper.js/dist/popper.min.js'
 import '../sass/style.scss'
+import '@fortawesome/fontawesome-free/js/all.min.js';
