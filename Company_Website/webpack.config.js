@@ -7,7 +7,7 @@ module.exports = {
     entry: "./src/js/index.js",
     output: {
         filename: "js/bundle.js",
-        path: path.resolve(__dirname, "build"),
+        path: path.resolve(__dirname, "dist"),
         publicPath: "/",
         clean: true, // ينظف مجلد build تلقائياً قبل كل بناء
     },
@@ -84,6 +84,14 @@ module.exports = {
         template: "./src/add-blog.html",
         filename: "add-blog.html",
         }),
+        new HtmlWebpackPlugin({
+        template: "./src/about.html",
+        filename: "about.html",
+        }),
+        new HtmlWebpackPlugin({
+        template: "./src/contact.html",
+        filename: "contact.html",
+        }),
         new MiniCssExtractPlugin({
         filename: "css/style.css",
         }),
@@ -92,7 +100,7 @@ module.exports = {
     // Webpack Server
     devServer: {
         static: {
-        directory: path.join(__dirname, "build"),
+        directory: path.join(__dirname, "dist"),
         },
         port: 9000,
         open: true,
@@ -102,7 +110,7 @@ module.exports = {
         overlay: true, // يُظهر الأخطاء في المتصفح
         },
         devMiddleware: {
-            writeToDisk: false,
+            writeToDisk: true,
         },
     },
 
