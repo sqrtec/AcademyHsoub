@@ -1,0 +1,30 @@
+{
+  "name": "gp_school",
+  "version": "1.0.0",
+  "description": "أهلًا بك في مدرسة علمني، أفضل مدرسة على مستوى القطر متخصصة في تعليم وتأهيل الطلاب بأفضل الطرق والنشاطات، إن كنت تبحث عن مدرسة مميزة لابنك لا تتردد بالتواصل معنا.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --mode development",
+    "build": "webpack --mode production"
+  },
+  "keywords": ["مدرسة", "تعليم"],
+  "author": "Saker Ammar Chaher",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "file-loader": "^6.2.0",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.4",
+    "sass": "^1.93.2",
+    "sass-loader": "^16.0.6",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.102.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.1.0",
+    "bootstrap": "^5.3.8"
+  }
+}

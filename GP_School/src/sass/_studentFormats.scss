@@ -1,0 +1,66 @@
+@use './variables' as v;
+
+
+.title {
+    font-size: 21px;
+    font-weight: bold;
+    border-bottom: 3px solid v.$main_color;
+    padding-bottom: 10px;
+    color: v.$main_color;
+    margin: 35px 0;
+}
+
+.info-student {
+    .info-cards {
+        .card {
+            border: 0 !important;
+            height: 100%;
+
+            .card-body {
+                border-right: 5px solid v.$main_color;
+                border-radius: 5px;
+
+                h6 {
+                    font-size: 16px;
+                    color: v.$main_color;
+                    margin-bottom: 4px;
+                }
+            }
+        }
+    }
+}
+.table-student {
+    table {
+        text-align: center;
+        margin-bottom: 0;
+        thead {
+            tr {
+                th {
+                    background-color: v.$main_color !important;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.advice {
+    margin-bottom: 50px;
+    .tip-card {
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        border: 2px solid #E3E4E8;
+
+        h3 {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        p {
+            color: #6B7280;
+            padding-top: 10px;
+        }
+    }
+}
