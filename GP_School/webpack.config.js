@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { Generator } = require("webpack");
 
 module.exports = {
   entry: "./src/js/index.js", // ملف البداية
